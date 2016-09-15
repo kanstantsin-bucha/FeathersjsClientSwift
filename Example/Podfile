@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'FeathersjsClientSwift_Example' do
+  pod 'FeathersjsClientSwift', :path => '../'
+
+  target 'FeathersjsClientSwift_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
