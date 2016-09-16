@@ -1,0 +1,6 @@
+framework module Pods_FeathersjsClientSwift_Example {
+  umbrella header "Pods-FeathersjsClientSwift_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

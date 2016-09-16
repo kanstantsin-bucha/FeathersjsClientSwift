@@ -1,0 +1,19 @@
+PODS:
+  - FeathersjsClientSwift (0.8.8):
+    - Socket.IO-Client-Swift (~> 8.0)
+  - Socket.IO-Client-Swift (8.0.0)
+
+DEPENDENCIES:
+  - FeathersjsClientSwift (from `../`)
+
+EXTERNAL SOURCES:
+  FeathersjsClientSwift:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FeathersjsClientSwift: a525359551d886bc86c2953660b4ae83ef2c492c
+  Socket.IO-Client-Swift: b5f6c274ad849b2b73717546dcf29d48ead707eb
+
+PODFILE CHECKSUM: 58468fbe913b597da86058a46074deb01ea1835e
+
+COCOAPODS: 1.1.0.rc.2

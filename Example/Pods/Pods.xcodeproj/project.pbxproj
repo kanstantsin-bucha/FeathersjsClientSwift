@@ -1,0 +1,1015 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		054D8A96294CFDB4F768A1A102264672 /* SocketStringReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670BE73CF5968D8D6D6C8AAC526F90E2 /* SocketStringReader.swift */; };
+		14926FD20CA654AC784EB19E36BC6B80 /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA4C77B579011103721BDB74AA5E6E9 /* ResponseParser.swift */; };
+		182E9D7EACAF07543423E75D3D361287 /* FeathersjsClientSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02460FD72EF34FCCB6FBDFAD09EA4669 /* FeathersjsClientSwift-dummy.m */; };
+		19AF17282E2336BE7CDF0AD3520BA505 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36F6652863175FDE16D90EF0BEF19B7 /* WebSocket.swift */; };
+		1A82B0DB1E2081330B5095FFDC2285A1 /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2057B3F60241DF6C6C2F84F32443C0 /* Emitter.swift */; };
+		290529DBB55CDFB1CD50AEC0D5C2FFEE /* SocketLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A3BB339105AF5BC77EB85BD3CB18E6 /* SocketLogger.swift */; };
+		3C346D013933C904DB054CD5A49B3EF6 /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C7371794B2FD1166116FE65298C78A4 /* SocketIO.framework */; };
+		420606B6D72058F7A7F7220C9410E185 /* SocketIOClientConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693A3F4FEDC4DE12781103EE82CB97D /* SocketIOClientConfiguration.swift */; };
+		4CE778BE08F895C51948DF349DDD76F6 /* SSLSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996BB3B147D524EF800F2194B91709F1 /* SSLSecurity.swift */; };
+		4DD96F8AB4E75A16B181A527685E64A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501108D0DB3A1E8F30E0B1A88B209067 /* Foundation.framework */; };
+		5202D00E28A5BEE6497F1B689FF67FE3 /* SocketAckEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B59BDFD692606D25A027C43E6C89A5C /* SocketAckEmitter.swift */; };
+		5AB1F5D6F7DC1140626BC54B5384C3B0 /* SocketAckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F244CCBBA45069AA8A524715B8E5966 /* SocketAckManager.swift */; };
+		649D362ACB32BF637DC9D48184BD7C77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501108D0DB3A1E8F30E0B1A88B209067 /* Foundation.framework */; };
+		67F090BB80F7F41C9B7E38FC55C8BF40 /* FeathersClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2ECA8B04876F97EF30AB21A38AEDFD /* FeathersClient.swift */; };
+		6D61B77DDF83BF26DE75423AC72039E8 /* SocketIOClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E64E91F0F5C8DABC045FC2BF66DF1 /* SocketIOClientSpec.swift */; };
+		75E6D92E7143309FEFA316D4C52D1E19 /* SocketExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83D48B450D21095FBEC2185F938BE67 /* SocketExtensions.swift */; };
+		7C94D8546FE5B02759FBFDCC377AE1E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501108D0DB3A1E8F30E0B1A88B209067 /* Foundation.framework */; };
+		866FD5532DDF9DC352279FEF7135809B /* SocketIOClientOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6DB44BEB912798F945A7288622BC11 /* SocketIOClientOption.swift */; };
+		8673BE5593BED01E6660415F0442B5E3 /* Pods-FeathersjsClientSwift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D1FDCEECC9B5C251E60730DC503017 /* Pods-FeathersjsClientSwift_Tests-dummy.m */; };
+		88DD4D5A4701247012CFA5471CF3588C /* SocketEnginePollable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E330F9F321E4350813202BD51BC3F67A /* SocketEnginePollable.swift */; };
+		89AC415C47DA9EEA90B7019B228A1173 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E153671649C5E29AE2B2116AA69CBBB /* UserAuth.swift */; };
+		8AD9E0288326D10FD4DCA6F1358E1C1B /* SocketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD80A7ADAB722173423A36E7463C4AFB /* SocketTypes.swift */; };
+		8EC1AC56F48DBCF89015E70ADB402B20 /* Receiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B47CE0C059C5EDCE438A21D1023309F /* Receiver.swift */; };
+		9D90F99C96FC8858EB643AC3AF0F9B3C /* SocketEngineWebsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5603ECF44D6231ED2C54E8BC2F385A37 /* SocketEngineWebsocket.swift */; };
+		A02F7127AA88DBA5558AF7EA118AB36F /* SocketEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F0F03BBE73D643AD0486ADFE0A8AC5 /* SocketEngine.swift */; };
+		A56B32737F93EC1D67F22FD7EFBE6335 /* SocketIOClientStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F306E01D91D86C36440F2FAD6F23C988 /* SocketIOClientStatus.swift */; };
+		AAFA38360FB5E749E5AB2F14A9132EA7 /* FeathersjsClientSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F04ED17FAC96F9CB162019104EC27B05 /* FeathersjsClientSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC25D6932675264B2115042A0A214554 /* Pods-FeathersjsClientSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A86D7250FA9B496B44FEDCB3981A1C2F /* Pods-FeathersjsClientSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF52A8594C76A8A85773C9F1C822051C /* SocketAnyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9571AF94B7FB655E7868AEF99404CB /* SocketAnyEvent.swift */; };
+		BDEA3D4CFBAF9A64C6003812C87818F6 /* Pods-FeathersjsClientSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0905B13C9CA03397D279F9DCEBCED83A /* Pods-FeathersjsClientSwift_Example-dummy.m */; };
+		C13D9E861603B1E61B0AD4505CCD3B43 /* Pods-FeathersjsClientSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D5A4232043ECB12B400FDC03EC81964 /* Pods-FeathersjsClientSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1CDEE03FF85FC356743AC5EE5E1F974 /* SocketEnginePacketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525F0BEBFC24363C1C12BFED1C52E09A /* SocketEnginePacketType.swift */; };
+		C5619EE141802C64AD2A29F26E57A678 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F99D171ED76D3C16E3CCA0129376A1D5 /* UIKit.framework */; };
+		C79838AC7BF0EBEFB2DBF5EAA3530BDC /* Socket.IO-Client-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F57EC4469168DB9A573C09EAF2AEF49 /* Socket.IO-Client-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C84CE04624A0F0E1E9FFA9BC803238C4 /* Socket.IO-Client-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 87905EC17B5665096942646DB7542569 /* Socket.IO-Client-Swift-dummy.m */; };
+		CF86FD0ADB154A50E075F24824ECB40E /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EAE89FD26A461FD18EFD671BC2A669 /* SocketIOClient.swift */; };
+		D1936F7278430E2B68A9C1347500AC22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501108D0DB3A1E8F30E0B1A88B209067 /* Foundation.framework */; };
+		D3F88EE3549D3BC1621EDFC025074DEB /* SocketClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1526DC8C1273F235789BF159D7714F /* SocketClientManager.swift */; };
+		DBF84EAC4F5B81FB8016972E17D76BF0 /* SocketEngineSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1670BB5EB79304C745E1AE522C2461EE /* SocketEngineSpec.swift */; };
+		DDBCE5D54B951443571BE17FC9701ED5 /* SocketEngineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D342D3CD8230E8928AFA54BF2F79D0 /* SocketEngineClient.swift */; };
+		ECD42C9B4B5EAE0C488BB670C709E8E8 /* SocketParsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9ACCB4FBAE731DCA98FD8DB00CF2B /* SocketParsable.swift */; };
+		FF7FF76BF8FF4647B262FA39B3A73C8F /* SocketPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117F685036DDF69767FA0894A36AFD79 /* SocketPacket.swift */; };
+		FFF75F38CB27A443EDE05A49CE1ACC35 /* SocketEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D782257DB50BC7B57630A5BD577C6 /* SocketEventHandler.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0BB5C0FBF6A21D5F1A8A19F84F20F76F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC5813E16CB07A8531DA0416E7A31A44;
+			remoteInfo = FeathersjsClientSwift;
+		};
+		463FBE2AD3417158F14193F2138AE0AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B522815B758F149B5B9B7AE02E6E4F6;
+			remoteInfo = "Socket.IO-Client-Swift";
+		};
+		B8C8338FA0D1834A7C73169623B2AB10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B522815B758F149B5B9B7AE02E6E4F6;
+			remoteInfo = "Socket.IO-Client-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02460FD72EF34FCCB6FBDFAD09EA4669 /* FeathersjsClientSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FeathersjsClientSwift-dummy.m"; sourceTree = "<group>"; };
+		043D782257DB50BC7B57630A5BD577C6 /* SocketEventHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEventHandler.swift; path = Source/SocketEventHandler.swift; sourceTree = "<group>"; };
+		05DD98DF656FDC7D8E64CD40CC3F4047 /* Socket.IO-Client-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Socket.IO-Client-Swift.modulemap"; sourceTree = "<group>"; };
+		0905B13C9CA03397D279F9DCEBCED83A /* Pods-FeathersjsClientSwift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FeathersjsClientSwift_Example-dummy.m"; sourceTree = "<group>"; };
+		0F244CCBBA45069AA8A524715B8E5966 /* SocketAckManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketAckManager.swift; path = Source/SocketAckManager.swift; sourceTree = "<group>"; };
+		117F685036DDF69767FA0894A36AFD79 /* SocketPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketPacket.swift; path = Source/SocketPacket.swift; sourceTree = "<group>"; };
+		1670BB5EB79304C745E1AE522C2461EE /* SocketEngineSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngineSpec.swift; path = Source/SocketEngineSpec.swift; sourceTree = "<group>"; };
+		25E43176891C05E55DCB6FB98A710720 /* FeathersjsClientSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FeathersjsClientSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29A3BB339105AF5BC77EB85BD3CB18E6 /* SocketLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketLogger.swift; path = Source/SocketLogger.swift; sourceTree = "<group>"; };
+		29E003B681E8AE9B3EE8A3C2F2C8ECBD /* Pods-FeathersjsClientSwift_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FeathersjsClientSwift_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2A70A2344E1FBD5F62CE7468D7D32673 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B1526DC8C1273F235789BF159D7714F /* SocketClientManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketClientManager.swift; path = Source/SocketClientManager.swift; sourceTree = "<group>"; };
+		2C7371794B2FD1166116FE65298C78A4 /* SocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocketIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DA0EE9FC7F168899519C498D3FEFEFA /* FeathersjsClientSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FeathersjsClientSwift.xcconfig; sourceTree = "<group>"; };
+		31F0F03BBE73D643AD0486ADFE0A8AC5 /* SocketEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngine.swift; path = Source/SocketEngine.swift; sourceTree = "<group>"; };
+		320E64E91F0F5C8DABC045FC2BF66DF1 /* SocketIOClientSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientSpec.swift; path = Source/SocketIOClientSpec.swift; sourceTree = "<group>"; };
+		35D1FDCEECC9B5C251E60730DC503017 /* Pods-FeathersjsClientSwift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FeathersjsClientSwift_Tests-dummy.m"; sourceTree = "<group>"; };
+		38EAE89FD26A461FD18EFD671BC2A669 /* SocketIOClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClient.swift; path = Source/SocketIOClient.swift; sourceTree = "<group>"; };
+		3A026E0699EF0ED210029C6616A9FE44 /* Pods_FeathersjsClientSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeathersjsClientSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B2ECA8B04876F97EF30AB21A38AEDFD /* FeathersClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeathersClient.swift; sourceTree = "<group>"; };
+		3BBC8B05C461F921CABC742BBD3878E5 /* Pods-FeathersjsClientSwift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FeathersjsClientSwift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		3F57EC4469168DB9A573C09EAF2AEF49 /* Socket.IO-Client-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Socket.IO-Client-Swift-umbrella.h"; sourceTree = "<group>"; };
+		42F0AAEE167023B76FB7602BBFCDF8E4 /* FeathersjsClientSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FeathersjsClientSwift.modulemap; sourceTree = "<group>"; };
+		4508F729390EE55263BF51B2D2A321D6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C383605FD1EB09CD18E9A125F206BB7 /* Pods-FeathersjsClientSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FeathersjsClientSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
+		4E153671649C5E29AE2B2116AA69CBBB /* UserAuth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
+		4E852147BB8CA11C60363B97C1193E41 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F9E34BF0BA36E4C761E700F0EC855B3 /* Pods-FeathersjsClientSwift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FeathersjsClientSwift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		501108D0DB3A1E8F30E0B1A88B209067 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		51D342D3CD8230E8928AFA54BF2F79D0 /* SocketEngineClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngineClient.swift; path = Source/SocketEngineClient.swift; sourceTree = "<group>"; };
+		525F0BEBFC24363C1C12BFED1C52E09A /* SocketEnginePacketType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEnginePacketType.swift; path = Source/SocketEnginePacketType.swift; sourceTree = "<group>"; };
+		538CA65C08EB24AEA4A4DF0DFE0E9B59 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5603ECF44D6231ED2C54E8BC2F385A37 /* SocketEngineWebsocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngineWebsocket.swift; path = Source/SocketEngineWebsocket.swift; sourceTree = "<group>"; };
+		5A2057B3F60241DF6C6C2F84F32443C0 /* Emitter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
+		670BE73CF5968D8D6D6C8AAC526F90E2 /* SocketStringReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketStringReader.swift; path = Source/SocketStringReader.swift; sourceTree = "<group>"; };
+		69B3C0A019BBD454161F74ECDABC216A /* Pods-FeathersjsClientSwift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FeathersjsClientSwift_Tests.modulemap"; sourceTree = "<group>"; };
+		6AE9ACCB4FBAE731DCA98FD8DB00CF2B /* SocketParsable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketParsable.swift; path = Source/SocketParsable.swift; sourceTree = "<group>"; };
+		6D9571AF94B7FB655E7868AEF99404CB /* SocketAnyEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketAnyEvent.swift; path = Source/SocketAnyEvent.swift; sourceTree = "<group>"; };
+		7D5A4232043ECB12B400FDC03EC81964 /* Pods-FeathersjsClientSwift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FeathersjsClientSwift_Example-umbrella.h"; sourceTree = "<group>"; };
+		7FA4C77B579011103721BDB74AA5E6E9 /* ResponseParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
+		84342AA3BA206A5DE122E039D467AFC6 /* Pods-FeathersjsClientSwift_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeathersjsClientSwift_Example-resources.sh"; sourceTree = "<group>"; };
+		87905EC17B5665096942646DB7542569 /* Socket.IO-Client-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Socket.IO-Client-Swift-dummy.m"; sourceTree = "<group>"; };
+		8B47CE0C059C5EDCE438A21D1023309F /* Receiver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Receiver.swift; sourceTree = "<group>"; };
+		8D365F74170AB0267782BF0EAFE516CF /* Pods_FeathersjsClientSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeathersjsClientSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F48F848924A3AC9F882096CE4E242C5 /* Pods-FeathersjsClientSwift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FeathersjsClientSwift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9693A3F4FEDC4DE12781103EE82CB97D /* SocketIOClientConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientConfiguration.swift; path = Source/SocketIOClientConfiguration.swift; sourceTree = "<group>"; };
+		96D848E5ABC5607173B9103F130B97CE /* Pods-FeathersjsClientSwift_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeathersjsClientSwift_Tests-resources.sh"; sourceTree = "<group>"; };
+		996BB3B147D524EF800F2194B91709F1 /* SSLSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLSecurity.swift; path = Source/SSLSecurity.swift; sourceTree = "<group>"; };
+		9B59BDFD692606D25A027C43E6C89A5C /* SocketAckEmitter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketAckEmitter.swift; path = Source/SocketAckEmitter.swift; sourceTree = "<group>"; };
+		9DB71222497A08C84411ADF4BA0F6A87 /* Pods-FeathersjsClientSwift_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeathersjsClientSwift_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		9F9012D1CF800972BED941165B70893F /* Socket.IO-Client-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Socket.IO-Client-Swift.xcconfig"; sourceTree = "<group>"; };
+		A86D7250FA9B496B44FEDCB3981A1C2F /* Pods-FeathersjsClientSwift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FeathersjsClientSwift_Tests-umbrella.h"; sourceTree = "<group>"; };
+		ABAB6BDFEB8B747B1DF1FC1D314060E6 /* FeathersjsClientSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FeathersjsClientSwift-prefix.pch"; sourceTree = "<group>"; };
+		AC320885CF0FF292B94D736D91778512 /* Pods-FeathersjsClientSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FeathersjsClientSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		AC6DB44BEB912798F945A7288622BC11 /* SocketIOClientOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientOption.swift; path = Source/SocketIOClientOption.swift; sourceTree = "<group>"; };
+		ADC5BA4F3D9CB185F71E9D86D47AABBB /* Pods-FeathersjsClientSwift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FeathersjsClientSwift_Example.modulemap"; sourceTree = "<group>"; };
+		B3648CE64CD43F2D7309015E2794B657 /* Pods-FeathersjsClientSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FeathersjsClientSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B968FF59B925648DEF2FA58607709878 /* Pods-FeathersjsClientSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FeathersjsClientSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		DCCADD2F2E57CCA6A24D5065224E93B9 /* Pods-FeathersjsClientSwift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FeathersjsClientSwift_Example-frameworks.sh"; sourceTree = "<group>"; };
+		E330F9F321E4350813202BD51BC3F67A /* SocketEnginePollable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEnginePollable.swift; path = Source/SocketEnginePollable.swift; sourceTree = "<group>"; };
+		F04ED17FAC96F9CB162019104EC27B05 /* FeathersjsClientSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FeathersjsClientSwift-umbrella.h"; sourceTree = "<group>"; };
+		F306E01D91D86C36440F2FAD6F23C988 /* SocketIOClientStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientStatus.swift; path = Source/SocketIOClientStatus.swift; sourceTree = "<group>"; };
+		F36F6652863175FDE16D90EF0BEF19B7 /* WebSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = Source/WebSocket.swift; sourceTree = "<group>"; };
+		F57959BBDDA9210163F0CBFB7527AE25 /* Socket.IO-Client-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Socket.IO-Client-Swift-prefix.pch"; sourceTree = "<group>"; };
+		F83D48B450D21095FBEC2185F938BE67 /* SocketExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketExtensions.swift; path = Source/SocketExtensions.swift; sourceTree = "<group>"; };
+		F99D171ED76D3C16E3CCA0129376A1D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		FD0064243441F517DC315FDF998FAC65 /* SocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocketIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD80A7ADAB722173423A36E7463C4AFB /* SocketTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketTypes.swift; path = Source/SocketTypes.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F41B2207DB0D3DD04FD9D36688D2907 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DD96F8AB4E75A16B181A527685E64A3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF3ACE0C096F662960AB945E1F6953B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				649D362ACB32BF637DC9D48184BD7C77 /* Foundation.framework in Frameworks */,
+				3C346D013933C904DB054CD5A49B3EF6 /* SocketIO.framework in Frameworks */,
+				C5619EE141802C64AD2A29F26E57A678 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BEDA92F3F031E5F845FC4BF37BB3521 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1936F7278430E2B68A9C1347500AC22 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEBEB991421813DE9747BA0DAA193346 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C94D8546FE5B02759FBFDCC377AE1E9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06FCB82AA93FF76BA547AB1D3AB0ADFF /* Socket.IO-Client-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				9B59BDFD692606D25A027C43E6C89A5C /* SocketAckEmitter.swift */,
+				0F244CCBBA45069AA8A524715B8E5966 /* SocketAckManager.swift */,
+				6D9571AF94B7FB655E7868AEF99404CB /* SocketAnyEvent.swift */,
+				2B1526DC8C1273F235789BF159D7714F /* SocketClientManager.swift */,
+				31F0F03BBE73D643AD0486ADFE0A8AC5 /* SocketEngine.swift */,
+				51D342D3CD8230E8928AFA54BF2F79D0 /* SocketEngineClient.swift */,
+				525F0BEBFC24363C1C12BFED1C52E09A /* SocketEnginePacketType.swift */,
+				E330F9F321E4350813202BD51BC3F67A /* SocketEnginePollable.swift */,
+				1670BB5EB79304C745E1AE522C2461EE /* SocketEngineSpec.swift */,
+				5603ECF44D6231ED2C54E8BC2F385A37 /* SocketEngineWebsocket.swift */,
+				043D782257DB50BC7B57630A5BD577C6 /* SocketEventHandler.swift */,
+				F83D48B450D21095FBEC2185F938BE67 /* SocketExtensions.swift */,
+				38EAE89FD26A461FD18EFD671BC2A669 /* SocketIOClient.swift */,
+				9693A3F4FEDC4DE12781103EE82CB97D /* SocketIOClientConfiguration.swift */,
+				AC6DB44BEB912798F945A7288622BC11 /* SocketIOClientOption.swift */,
+				320E64E91F0F5C8DABC045FC2BF66DF1 /* SocketIOClientSpec.swift */,
+				F306E01D91D86C36440F2FAD6F23C988 /* SocketIOClientStatus.swift */,
+				29A3BB339105AF5BC77EB85BD3CB18E6 /* SocketLogger.swift */,
+				117F685036DDF69767FA0894A36AFD79 /* SocketPacket.swift */,
+				6AE9ACCB4FBAE731DCA98FD8DB00CF2B /* SocketParsable.swift */,
+				670BE73CF5968D8D6D6C8AAC526F90E2 /* SocketStringReader.swift */,
+				FD80A7ADAB722173423A36E7463C4AFB /* SocketTypes.swift */,
+				996BB3B147D524EF800F2194B91709F1 /* SSLSecurity.swift */,
+				F36F6652863175FDE16D90EF0BEF19B7 /* WebSocket.swift */,
+				C964BA47013163C7F484F1A789B76193 /* Support Files */,
+			);
+			path = "Socket.IO-Client-Swift";
+			sourceTree = "<group>";
+		};
+		0AF4A7CCDD16E4EBB3E0E90D8C83CA89 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C360A6A1212CB7D5A996BE0647CDC2F4 /* Pods-FeathersjsClientSwift_Example */,
+				8F321E9304DCDD6BC2830E0577030E12 /* Pods-FeathersjsClientSwift_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1DED3E446053838B8C07935B8EA88E50 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				501108D0DB3A1E8F30E0B1A88B209067 /* Foundation.framework */,
+				F99D171ED76D3C16E3CCA0129376A1D5 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6DEFE0A1FF36A187B009636AEC4BA4C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				25E43176891C05E55DCB6FB98A710720 /* FeathersjsClientSwift.framework */,
+				8D365F74170AB0267782BF0EAFE516CF /* Pods_FeathersjsClientSwift_Example.framework */,
+				3A026E0699EF0ED210029C6616A9FE44 /* Pods_FeathersjsClientSwift_Tests.framework */,
+				FD0064243441F517DC315FDF998FAC65 /* SocketIO.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				A130E4926E6BCB180970B5A8595900CC /* Development Pods */,
+				D67A855BB14021F59DA90438A2476839 /* Frameworks */,
+				87AC66C613B2A233B3C94B7B15C485E3 /* Pods */,
+				6DEFE0A1FF36A187B009636AEC4BA4C1 /* Products */,
+				0AF4A7CCDD16E4EBB3E0E90D8C83CA89 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		87AC66C613B2A233B3C94B7B15C485E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				06FCB82AA93FF76BA547AB1D3AB0ADFF /* Socket.IO-Client-Swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8F321E9304DCDD6BC2830E0577030E12 /* Pods-FeathersjsClientSwift_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				538CA65C08EB24AEA4A4DF0DFE0E9B59 /* Info.plist */,
+				69B3C0A019BBD454161F74ECDABC216A /* Pods-FeathersjsClientSwift_Tests.modulemap */,
+				8F48F848924A3AC9F882096CE4E242C5 /* Pods-FeathersjsClientSwift_Tests-acknowledgements.markdown */,
+				4F9E34BF0BA36E4C761E700F0EC855B3 /* Pods-FeathersjsClientSwift_Tests-acknowledgements.plist */,
+				35D1FDCEECC9B5C251E60730DC503017 /* Pods-FeathersjsClientSwift_Tests-dummy.m */,
+				9DB71222497A08C84411ADF4BA0F6A87 /* Pods-FeathersjsClientSwift_Tests-frameworks.sh */,
+				96D848E5ABC5607173B9103F130B97CE /* Pods-FeathersjsClientSwift_Tests-resources.sh */,
+				A86D7250FA9B496B44FEDCB3981A1C2F /* Pods-FeathersjsClientSwift_Tests-umbrella.h */,
+				B3648CE64CD43F2D7309015E2794B657 /* Pods-FeathersjsClientSwift_Tests.debug.xcconfig */,
+				AC320885CF0FF292B94D736D91778512 /* Pods-FeathersjsClientSwift_Tests.release.xcconfig */,
+			);
+			name = "Pods-FeathersjsClientSwift_Tests";
+			path = "Target Support Files/Pods-FeathersjsClientSwift_Tests";
+			sourceTree = "<group>";
+		};
+		A130E4926E6BCB180970B5A8595900CC /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7869991C5BE03FA956062141787B2F2 /* FeathersjsClientSwift */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		B66A8F58B364F09FE73DF9EDACC7183E /* FeathersjsClientSwift */ = {
+			isa = PBXGroup;
+			children = (
+				F7198B129FC7F27F709D0B64D76DA4D3 /* Classes */,
+			);
+			path = FeathersjsClientSwift;
+			sourceTree = "<group>";
+		};
+		B7869991C5BE03FA956062141787B2F2 /* FeathersjsClientSwift */ = {
+			isa = PBXGroup;
+			children = (
+				B66A8F58B364F09FE73DF9EDACC7183E /* FeathersjsClientSwift */,
+				D32B6B7568D1AEBD39F2A7BBAAB869B5 /* Support Files */,
+			);
+			name = FeathersjsClientSwift;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		C360A6A1212CB7D5A996BE0647CDC2F4 /* Pods-FeathersjsClientSwift_Example */ = {
+			isa = PBXGroup;
+			children = (
+				4508F729390EE55263BF51B2D2A321D6 /* Info.plist */,
+				ADC5BA4F3D9CB185F71E9D86D47AABBB /* Pods-FeathersjsClientSwift_Example.modulemap */,
+				29E003B681E8AE9B3EE8A3C2F2C8ECBD /* Pods-FeathersjsClientSwift_Example-acknowledgements.markdown */,
+				3BBC8B05C461F921CABC742BBD3878E5 /* Pods-FeathersjsClientSwift_Example-acknowledgements.plist */,
+				0905B13C9CA03397D279F9DCEBCED83A /* Pods-FeathersjsClientSwift_Example-dummy.m */,
+				DCCADD2F2E57CCA6A24D5065224E93B9 /* Pods-FeathersjsClientSwift_Example-frameworks.sh */,
+				84342AA3BA206A5DE122E039D467AFC6 /* Pods-FeathersjsClientSwift_Example-resources.sh */,
+				7D5A4232043ECB12B400FDC03EC81964 /* Pods-FeathersjsClientSwift_Example-umbrella.h */,
+				B968FF59B925648DEF2FA58607709878 /* Pods-FeathersjsClientSwift_Example.debug.xcconfig */,
+				4C383605FD1EB09CD18E9A125F206BB7 /* Pods-FeathersjsClientSwift_Example.release.xcconfig */,
+			);
+			name = "Pods-FeathersjsClientSwift_Example";
+			path = "Target Support Files/Pods-FeathersjsClientSwift_Example";
+			sourceTree = "<group>";
+		};
+		C964BA47013163C7F484F1A789B76193 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E852147BB8CA11C60363B97C1193E41 /* Info.plist */,
+				05DD98DF656FDC7D8E64CD40CC3F4047 /* Socket.IO-Client-Swift.modulemap */,
+				9F9012D1CF800972BED941165B70893F /* Socket.IO-Client-Swift.xcconfig */,
+				87905EC17B5665096942646DB7542569 /* Socket.IO-Client-Swift-dummy.m */,
+				F57959BBDDA9210163F0CBFB7527AE25 /* Socket.IO-Client-Swift-prefix.pch */,
+				3F57EC4469168DB9A573C09EAF2AEF49 /* Socket.IO-Client-Swift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Socket.IO-Client-Swift";
+			sourceTree = "<group>";
+		};
+		D32B6B7568D1AEBD39F2A7BBAAB869B5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				42F0AAEE167023B76FB7602BBFCDF8E4 /* FeathersjsClientSwift.modulemap */,
+				2DA0EE9FC7F168899519C498D3FEFEFA /* FeathersjsClientSwift.xcconfig */,
+				02460FD72EF34FCCB6FBDFAD09EA4669 /* FeathersjsClientSwift-dummy.m */,
+				ABAB6BDFEB8B747B1DF1FC1D314060E6 /* FeathersjsClientSwift-prefix.pch */,
+				F04ED17FAC96F9CB162019104EC27B05 /* FeathersjsClientSwift-umbrella.h */,
+				2A70A2344E1FBD5F62CE7468D7D32673 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/FeathersjsClientSwift";
+			sourceTree = "<group>";
+		};
+		D67A855BB14021F59DA90438A2476839 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C7371794B2FD1166116FE65298C78A4 /* SocketIO.framework */,
+				1DED3E446053838B8C07935B8EA88E50 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7198B129FC7F27F709D0B64D76DA4D3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5A2057B3F60241DF6C6C2F84F32443C0 /* Emitter.swift */,
+				3B2ECA8B04876F97EF30AB21A38AEDFD /* FeathersClient.swift */,
+				8B47CE0C059C5EDCE438A21D1023309F /* Receiver.swift */,
+				7FA4C77B579011103721BDB74AA5E6E9 /* ResponseParser.swift */,
+				4E153671649C5E29AE2B2116AA69CBBB /* UserAuth.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		518B269AABAF87F5D04C59AD609A4F21 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC25D6932675264B2115042A0A214554 /* Pods-FeathersjsClientSwift_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0EA466A3FB54335C968A998871A13D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C79838AC7BF0EBEFB2DBF5EAA3530BDC /* Socket.IO-Client-Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDA243AA067D1346D93D47B24F88E05B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C13D9E861603B1E61B0AD4505CCD3B43 /* Pods-FeathersjsClientSwift_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F14BAF482B9BB1A2ABEDB879C24A8407 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAFA38360FB5E749E5AB2F14A9132EA7 /* FeathersjsClientSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		214291667DF6FC956DA30CF5B6888F4D /* Pods-FeathersjsClientSwift_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D2B5C5E7AA740E3FD2AD42334518278 /* Build configuration list for PBXNativeTarget "Pods-FeathersjsClientSwift_Tests" */;
+			buildPhases = (
+				8390F7690DCA4F9B2EBE7675F401A887 /* Sources */,
+				8BEDA92F3F031E5F845FC4BF37BB3521 /* Frameworks */,
+				518B269AABAF87F5D04C59AD609A4F21 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-FeathersjsClientSwift_Tests";
+			productName = "Pods-FeathersjsClientSwift_Tests";
+			productReference = 3A026E0699EF0ED210029C6616A9FE44 /* Pods_FeathersjsClientSwift_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8B522815B758F149B5B9B7AE02E6E4F6 /* Socket.IO-Client-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05565685BE65BB6B1282AEBCEFF42B1F /* Build configuration list for PBXNativeTarget "Socket.IO-Client-Swift" */;
+			buildPhases = (
+				B709857AA00B0F036515C6A126FCFB9A /* Sources */,
+				EEBEB991421813DE9747BA0DAA193346 /* Frameworks */,
+				C0EA466A3FB54335C968A998871A13D5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Socket.IO-Client-Swift";
+			productName = "Socket.IO-Client-Swift";
+			productReference = FD0064243441F517DC315FDF998FAC65 /* SocketIO.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D613216A39CFBA33F5D5B5DB4B346DE4 /* Pods-FeathersjsClientSwift_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D577866E18B05EE250C24EB7864573C /* Build configuration list for PBXNativeTarget "Pods-FeathersjsClientSwift_Example" */;
+			buildPhases = (
+				65B7F7C3EE29FFBC2107DCBED5CB3D9B /* Sources */,
+				2F41B2207DB0D3DD04FD9D36688D2907 /* Frameworks */,
+				DDA243AA067D1346D93D47B24F88E05B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F03A22157C02739937DED7F37058041 /* PBXTargetDependency */,
+				1ECD4971769D0523A2D6AF8B371CF698 /* PBXTargetDependency */,
+			);
+			name = "Pods-FeathersjsClientSwift_Example";
+			productName = "Pods-FeathersjsClientSwift_Example";
+			productReference = 8D365F74170AB0267782BF0EAFE516CF /* Pods_FeathersjsClientSwift_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DC5813E16CB07A8531DA0416E7A31A44 /* FeathersjsClientSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0361C4D4F6A2FD5292559756A0344656 /* Build configuration list for PBXNativeTarget "FeathersjsClientSwift" */;
+			buildPhases = (
+				74EAC9E91931B35791B1DBD1B7CC4CE2 /* Sources */,
+				4FF3ACE0C096F662960AB945E1F6953B /* Frameworks */,
+				F14BAF482B9BB1A2ABEDB879C24A8407 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6307BF0C5900CA473CA8911EEE19CD6 /* PBXTargetDependency */,
+			);
+			name = FeathersjsClientSwift;
+			productName = FeathersjsClientSwift;
+			productReference = 25E43176891C05E55DCB6FB98A710720 /* FeathersjsClientSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 6DEFE0A1FF36A187B009636AEC4BA4C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC5813E16CB07A8531DA0416E7A31A44 /* FeathersjsClientSwift */,
+				D613216A39CFBA33F5D5B5DB4B346DE4 /* Pods-FeathersjsClientSwift_Example */,
+				214291667DF6FC956DA30CF5B6888F4D /* Pods-FeathersjsClientSwift_Tests */,
+				8B522815B758F149B5B9B7AE02E6E4F6 /* Socket.IO-Client-Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65B7F7C3EE29FFBC2107DCBED5CB3D9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDEA3D4CFBAF9A64C6003812C87818F6 /* Pods-FeathersjsClientSwift_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74EAC9E91931B35791B1DBD1B7CC4CE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A82B0DB1E2081330B5095FFDC2285A1 /* Emitter.swift in Sources */,
+				67F090BB80F7F41C9B7E38FC55C8BF40 /* FeathersClient.swift in Sources */,
+				182E9D7EACAF07543423E75D3D361287 /* FeathersjsClientSwift-dummy.m in Sources */,
+				8EC1AC56F48DBCF89015E70ADB402B20 /* Receiver.swift in Sources */,
+				14926FD20CA654AC784EB19E36BC6B80 /* ResponseParser.swift in Sources */,
+				89AC415C47DA9EEA90B7019B228A1173 /* UserAuth.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8390F7690DCA4F9B2EBE7675F401A887 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8673BE5593BED01E6660415F0442B5E3 /* Pods-FeathersjsClientSwift_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B709857AA00B0F036515C6A126FCFB9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C84CE04624A0F0E1E9FFA9BC803238C4 /* Socket.IO-Client-Swift-dummy.m in Sources */,
+				5202D00E28A5BEE6497F1B689FF67FE3 /* SocketAckEmitter.swift in Sources */,
+				5AB1F5D6F7DC1140626BC54B5384C3B0 /* SocketAckManager.swift in Sources */,
+				AF52A8594C76A8A85773C9F1C822051C /* SocketAnyEvent.swift in Sources */,
+				D3F88EE3549D3BC1621EDFC025074DEB /* SocketClientManager.swift in Sources */,
+				A02F7127AA88DBA5558AF7EA118AB36F /* SocketEngine.swift in Sources */,
+				DDBCE5D54B951443571BE17FC9701ED5 /* SocketEngineClient.swift in Sources */,
+				C1CDEE03FF85FC356743AC5EE5E1F974 /* SocketEnginePacketType.swift in Sources */,
+				88DD4D5A4701247012CFA5471CF3588C /* SocketEnginePollable.swift in Sources */,
+				DBF84EAC4F5B81FB8016972E17D76BF0 /* SocketEngineSpec.swift in Sources */,
+				9D90F99C96FC8858EB643AC3AF0F9B3C /* SocketEngineWebsocket.swift in Sources */,
+				FFF75F38CB27A443EDE05A49CE1ACC35 /* SocketEventHandler.swift in Sources */,
+				75E6D92E7143309FEFA316D4C52D1E19 /* SocketExtensions.swift in Sources */,
+				CF86FD0ADB154A50E075F24824ECB40E /* SocketIOClient.swift in Sources */,
+				420606B6D72058F7A7F7220C9410E185 /* SocketIOClientConfiguration.swift in Sources */,
+				866FD5532DDF9DC352279FEF7135809B /* SocketIOClientOption.swift in Sources */,
+				6D61B77DDF83BF26DE75423AC72039E8 /* SocketIOClientSpec.swift in Sources */,
+				A56B32737F93EC1D67F22FD7EFBE6335 /* SocketIOClientStatus.swift in Sources */,
+				290529DBB55CDFB1CD50AEC0D5C2FFEE /* SocketLogger.swift in Sources */,
+				FF7FF76BF8FF4647B262FA39B3A73C8F /* SocketPacket.swift in Sources */,
+				ECD42C9B4B5EAE0C488BB670C709E8E8 /* SocketParsable.swift in Sources */,
+				054D8A96294CFDB4F768A1A102264672 /* SocketStringReader.swift in Sources */,
+				8AD9E0288326D10FD4DCA6F1358E1C1B /* SocketTypes.swift in Sources */,
+				4CE778BE08F895C51948DF349DDD76F6 /* SSLSecurity.swift in Sources */,
+				19AF17282E2336BE7CDF0AD3520BA505 /* WebSocket.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1ECD4971769D0523A2D6AF8B371CF698 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Socket.IO-Client-Swift";
+			target = 8B522815B758F149B5B9B7AE02E6E4F6 /* Socket.IO-Client-Swift */;
+			targetProxy = 463FBE2AD3417158F14193F2138AE0AD /* PBXContainerItemProxy */;
+		};
+		8F03A22157C02739937DED7F37058041 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FeathersjsClientSwift;
+			target = DC5813E16CB07A8531DA0416E7A31A44 /* FeathersjsClientSwift */;
+			targetProxy = 0BB5C0FBF6A21D5F1A8A19F84F20F76F /* PBXContainerItemProxy */;
+		};
+		A6307BF0C5900CA473CA8911EEE19CD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Socket.IO-Client-Swift";
+			target = 8B522815B758F149B5B9B7AE02E6E4F6 /* Socket.IO-Client-Swift */;
+			targetProxy = B8C8338FA0D1834A7C73169623B2AB10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		04C5EC5694CF81C649058D7E1D5705B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F9012D1CF800972BED941165B70893F /* Socket.IO-Client-Swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Socket.IO-Client-Swift/Socket.IO-Client-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Socket.IO-Client-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Socket.IO-Client-Swift/Socket.IO-Client-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SocketIO;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		06682A6048F24D7EDE3E3C85EDE0DEFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3648CE64CD43F2D7309015E2794B657 /* Pods-FeathersjsClientSwift_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FeathersjsClientSwift_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FeathersjsClientSwift_Tests/Pods-FeathersjsClientSwift_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FeathersjsClientSwift_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		071E84286B3756AFA7E4FC0466CF63DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DA0EE9FC7F168899519C498D3FEFEFA /* FeathersjsClientSwift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FeathersjsClientSwift/FeathersjsClientSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FeathersjsClientSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FeathersjsClientSwift/FeathersjsClientSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FeathersjsClientSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		15F3B467F4F5BB52A0A0BC937D89186A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C383605FD1EB09CD18E9A125F206BB7 /* Pods-FeathersjsClientSwift_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FeathersjsClientSwift_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FeathersjsClientSwift_Example/Pods-FeathersjsClientSwift_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FeathersjsClientSwift_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		45094592AC81D9F195263F5DE81796D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC320885CF0FF292B94D736D91778512 /* Pods-FeathersjsClientSwift_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FeathersjsClientSwift_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FeathersjsClientSwift_Tests/Pods-FeathersjsClientSwift_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FeathersjsClientSwift_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		688AF10D7991E8E6A1749BB84775D37E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B968FF59B925648DEF2FA58607709878 /* Pods-FeathersjsClientSwift_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FeathersjsClientSwift_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FeathersjsClientSwift_Example/Pods-FeathersjsClientSwift_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FeathersjsClientSwift_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D79581A96B8E2EDEB831A1093ADFC97B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DA0EE9FC7F168899519C498D3FEFEFA /* FeathersjsClientSwift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FeathersjsClientSwift/FeathersjsClientSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FeathersjsClientSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FeathersjsClientSwift/FeathersjsClientSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FeathersjsClientSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FB3ED5BC4711C464A08B157C0BC8D443 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F9012D1CF800972BED941165B70893F /* Socket.IO-Client-Swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Socket.IO-Client-Swift/Socket.IO-Client-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Socket.IO-Client-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Socket.IO-Client-Swift/Socket.IO-Client-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SocketIO;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0361C4D4F6A2FD5292559756A0344656 /* Build configuration list for PBXNativeTarget "FeathersjsClientSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071E84286B3756AFA7E4FC0466CF63DE /* Debug */,
+				D79581A96B8E2EDEB831A1093ADFC97B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05565685BE65BB6B1282AEBCEFF42B1F /* Build configuration list for PBXNativeTarget "Socket.IO-Client-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB3ED5BC4711C464A08B157C0BC8D443 /* Debug */,
+				04C5EC5694CF81C649058D7E1D5705B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D577866E18B05EE250C24EB7864573C /* Build configuration list for PBXNativeTarget "Pods-FeathersjsClientSwift_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				688AF10D7991E8E6A1749BB84775D37E /* Debug */,
+				15F3B467F4F5BB52A0A0BC937D89186A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
+				B7324857C38B065FEB1EEE3105C2367A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D2B5C5E7AA740E3FD2AD42334518278 /* Build configuration list for PBXNativeTarget "Pods-FeathersjsClientSwift_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06682A6048F24D7EDE3E3C85EDE0DEFF /* Debug */,
+				45094592AC81D9F195263F5DE81796D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -1,3 +1,4 @@
+platform :ios, '9.0'
 use_frameworks!
 
 target 'FeathersjsClientSwift_Example' do
@@ -5,7 +6,6 @@ target 'FeathersjsClientSwift_Example' do
 
   target 'FeathersjsClientSwift_Tests' do
     inherit! :search_paths
-
-    
   end
+  
 end

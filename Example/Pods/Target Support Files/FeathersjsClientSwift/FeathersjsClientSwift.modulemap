@@ -1,0 +1,6 @@
+framework module FeathersjsClientSwift {
+  umbrella header "FeathersjsClientSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
