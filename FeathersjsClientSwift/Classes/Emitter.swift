@@ -41,22 +41,28 @@ open class Emitter {
     
     /**
     Send an event to server
-    
-    - Throws: `FeathersError`
+    - parameter id: id of requested object (FeathersObjectID)
+    - parameter object: request object containing additional info (FeathersRequestObject)
+    - throws: `FeathersError`
     */
 
-    
-    public func emit(_ object: FeathersRequestObject? = nil) throws {
-        let data = object != nil ? [object!]
-                                 : []
+    public func emit(id: FeathersObjectID? = nil,
+                     _ object: FeathersRequestObject? = nil) throws {
+        let data = dataUsing(id: id,
+                             object: object,
+                             objects: nil)
         do { try emit(data: data)
         } catch {
             throw error
         }
     }
     
-    public func emit(_ objects: [FeathersRequestObject]) throws {
-        do { try emit(data: objects)
+    public func emit(id: FeathersObjectID? = nil,
+                     _ objects: [FeathersRequestObject]) throws {
+        let data = dataUsing(id: id,
+                             object: nil,
+                             objects: objects)
+        do { try emit(data: data)
         } catch {
             throw error
         }
@@ -78,26 +84,32 @@ open class Emitter {
     }
     
     /** 
-    Send an event to server and receive data from server using acknowledgement
-    
-    emitter will retain itself until callback will be received or timeout occured
-    
-    - Throws: `FeathersError`
+     - parameter id: id of requested object (FeathersObjectID)
+     - parameter object: request object containing additional info (FeathersRequestObject)
+     - throws: `FeathersError`
     */
     
-    public func emitWithAck(_ object: FeathersRequestObject? = nil,
-                     completion: @escaping ResponseHandler) throws {
-        let data = object != nil ? [object!]
-                                 : []
-        do { try emitWithAck(data: data, completion: completion)
+    public func emitWithAck(id: FeathersObjectID? = nil,
+                            _ object: FeathersRequestObject? = nil,
+                            completion: @escaping ResponseHandler) throws {
+        let data = dataUsing(id: id,
+                             object: object,
+                             objects: nil)
+        do { try emitWithAck(data: data,
+                             completion: completion)
         } catch {
             throw error
         }
     }
     
-    public func emitWithAck(_ objects: [FeathersRequestObject],
-                     completion: @escaping ResponseHandler) throws {
-        do { try emitWithAck(data: objects, completion: completion)
+    public func emitWithAck(id: FeathersObjectID? = nil,
+                            _ objects: [FeathersRequestObject],
+                            completion: @escaping ResponseHandler) throws {
+        let data = dataUsing(id: id,
+                             object: nil,
+                             objects: objects)
+        do { try emitWithAck(data: data,
+                             completion: completion)
         } catch {
             throw error
         }
@@ -123,10 +135,29 @@ open class Emitter {
         }
         
         callback?(feathers.timeout, { (data) in
-            print("=== data \(data)")
             let response = self.responseParser.parse(responseData: data)
-            print("=== response \(response)")
+            print("=== received response \(response)")
             completion(response)
         })
+    }
+    
+    fileprivate func dataUsing(id: FeathersObjectID?,
+                               object: FeathersRequestObject?,
+                               objects: FeathersRequestArray?) -> SocketRequestData {
+        var result: SocketRequestData = []
+        
+        if let id = id as? SocketData {
+            result.append(id)
+        }
+        
+        if let object = object as? SocketData {
+            result.append(object)
+        }
+        
+        if let objects = objects {
+            result.append(objects)
+        }
+        
+        return result
     }
 }

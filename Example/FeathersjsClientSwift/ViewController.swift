@@ -50,7 +50,7 @@ class ViewController: UIViewController {
                     return
                 }
                 
-                let object = response.extractObject()?["data"] as? FeathersResponseObject
+                let object = response.extractDataObject()
                 let ID = object?["id"]
                 let userID = ID as? Int
                 
@@ -85,7 +85,7 @@ class ViewController: UIViewController {
                                event: "unauthorized")
         do { try
             self.authFailedReceiver?.startListening() { (response, ack) in
-            let object = response.extractObject()
+            let object = response.extractResponseObject()
                 print("Received unauthentification event \(object)")
             }
         } catch {
@@ -110,14 +110,13 @@ class ViewController: UIViewController {
                 print("Creation error error: \r\n \(error)")
                 return
             }
-            let object = response.extractObject()
+            let object = response.extractResponseObject()
             print("Received \(object)")
             // you stuff
             }
         } catch {
             print("Connection error: \r\n \(error)") 
         }
-
     }
 }
 

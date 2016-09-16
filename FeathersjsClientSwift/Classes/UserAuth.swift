@@ -20,7 +20,7 @@ open class UserAuth: UserAuthProtocol {
     public let email: String
     public let password: String
     
-    static let passwordMinCharactersCount = 5
+    public static let passwordMinCharactersCount = 5
     
     public init?(email: String,
                  password: String) {

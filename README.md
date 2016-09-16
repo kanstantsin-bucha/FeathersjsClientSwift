@@ -5,6 +5,13 @@
 [![License](https://img.shields.io/cocoapods/l/FeathersjsClientSwift.svg?style=flat)](http://cocoapods.org/pods/FeathersjsClientSwift)
 [![Platform](https://img.shields.io/cocoapods/p/FeathersjsClientSwift.svg?style=flat)](http://cocoapods.org/pods/FeathersjsClientSwift)
 
+## Description
+
+Feathersjs SocketIO Client for iOS wrote in Swift 3.0
+
+Could receive and emit events(with/without ack), handle server responses using clear response object.
+Processing auto reconnects, but you should handle Authentification yourself.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -45,8 +52,7 @@ add to your app info plist
 ## HOWTO connect
 
 ```
- // TODO: Please change to your server Socket IO URL
-        self.feathers = FeathersClient(URL: URL(string: "http://feathers")!,
+        self.feathers = FeathersClient(URL: URL(string: "http://localhost:3030")!,
                                        namespace: nil,
                                        token: "sdfsdfsdf",
                                        timeout: 60)
@@ -59,6 +65,7 @@ add to your app info plist
         }
         
         feathers?.onConnect = { [unowned self] response, ack in
+            
             do { try self.feathers?.authorize(auth!) { (response) in
                 let error = response.extractError()
                 guard error == nil else {
@@ -66,7 +73,7 @@ add to your app info plist
                     return
                 }
                 
-                let object = response.extractObject()?["data"] as? FeathersResponseObject
+                let object = response.extractDataObject()
                 let ID = object?["id"]
                 let userID = ID as? Int
                 
@@ -75,6 +82,7 @@ add to your app info plist
                     print("Authentification error: \r\n \(reason)")
                     return
                 }
+                print("Signed in as user with id \(userID)")
                 // Do you stuff here
                 }
             } catch {
@@ -95,26 +103,28 @@ add to your app info plist
         feathers?.onUnathorize = { response, ack in
             print("Connection unauthorized")
         }
-
+        
+        feathers?.connect()
 ```
 
 ## HOWTO send event (create user)
 
 ```
 
- let object: FeathersRequestObject = ["email": "e@mail.com",
-                                      "password" : "pass5"]
+        let object: FeathersRequestObject = ["email": "e@mail.com",
+                                             "password" : "pass5"]
         let emitter = Emitter(feathers: self.feathers!,
                               event: "users::create",
                               authRequired: false)
         
-        do { try emitter.emitWithAck(object) {  [unowned self] (response) in
+        do { try emitter.emitWithAck(object) { (response) in
             let error = response.extractError()
             guard error == nil else {
                 print("Creation error error: \r\n \(error)")
                 return
             }
-            let object = response.extractObject()
+            let object = response.extractResponseObject()
+            print("Received \(object)")
             // you stuff
             }
         } catch {
@@ -125,16 +135,17 @@ add to your app info plist
 ## HOWTO receive event (unauthorization event)
 
 ```
- authFailedReceiver =  Receiver(feathers: self.feathers!,
-                               event: "unauthorized")
+        authFailedReceiver =  Receiver(feathers: self.feathers!,
+                                       event: "unauthorized")
         do { try
-            self.authFailedReceiver.startListening() { (response, ack) in
-            let object = response.extractObject()
+            self.authFailedReceiver?.startListening() { (response, ack) in
+            let object = response.extractResponseObject()
                 print("Received unauthentification event \(object)")
             }
         } catch {
             print("===== authFailedReceiver has error: \(error)")
         }
+
 
 ```
 

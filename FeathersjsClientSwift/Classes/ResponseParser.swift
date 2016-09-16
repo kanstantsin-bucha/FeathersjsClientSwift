@@ -13,17 +13,48 @@ public protocol ResponseParser : class {
 }
 
 open class DefaultParser: ResponseParser {
+
     open func parse(responseData: SocketResponseData) -> FeathersResponse {
+        guard responseData.count > 0 else {
+            let result = FeathersResponse.success
+            return result
+        }
+    
         if let error = errorUsing(responseData: responseData) {
-            return FeathersResponse.error(error)
+            let result = FeathersResponse.error(error)
+            return result
         }
         
-        if let array = objectsArrayUsing(responseData: responseData) {
-            if array.count == 1 {
-                return FeathersResponse.object(array.first!)
-            }
+        let responseArray = objectsArrayUsing(responseData: responseData)
+        
+        guard responseArray != nil, responseArray!.count > 0 else {
+            let result = FeathersResponse.raw(responseData)
+            return result
+        }
+        
+        let serviceResponse = responseArray!.first!
+        let serviceData = serviceResponse["data"]
+        
+        guard serviceData != nil else {
+            let result = FeathersResponse.responseObject(serviceResponse)
+            return result
+        }
+        
+        if let object = serviceData as? FeathersResponseObject {
+            let result = FeathersResponse.dataObject(object)
+            return result
+        }
+        
+        if let array = objectsArrayUsing(responseData: serviceData as? SocketResponseData) {
+            let total = serviceResponse["total"] as? Int
+            let limit = serviceResponse["limit"] as? Int
+            let skip = serviceResponse["skip"] as? Int
             
-            return FeathersResponse.array(array)
+            let result = FeathersResponse.dataArray(array: array,
+                                                    total: total ?? Foundation.NSNotFound,
+                                                    skip: skip ?? Foundation.NSNotFound,
+                                                    limit: limit ?? Foundation.NSNotFound)
+            return result
         }
         
         return FeathersResponse.raw(responseData)
@@ -47,9 +78,14 @@ open class DefaultParser: ResponseParser {
         return nil
     }
     
-    fileprivate func objectsArrayUsing(responseData: SocketResponseData) -> FeathersResponseArray? {
-
-        let result = responseData.filter { (obj) -> Bool in
+    /**
+        Returns FeathersResponseObject objects array. If no objects found return nil
+    */
+    
+    fileprivate func objectsArrayUsing(responseData: SocketResponseData?) -> FeathersResponseArray? {
+        guard responseData != nil else { return nil }
+        
+        let result = responseData!.filter { (obj) -> Bool in
             let result = (obj as? FeathersResponseObject) != nil
             return result
         }

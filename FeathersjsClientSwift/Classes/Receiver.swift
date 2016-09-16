@@ -53,6 +53,7 @@ open class Receiver {
         
         handle = feathers.socket.on(event) { [unowned self] (data, ack) in
             let response = self.responseParser.parse(responseData: data)
+            print("=== received event \(self.event): \(response)")
             self.handler?(response, ack)
         }
         

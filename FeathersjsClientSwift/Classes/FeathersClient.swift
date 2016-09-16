@@ -9,6 +9,7 @@
 import Foundation
 import SocketIO
 
+public typealias FeathersObjectID = Int
 
 public typealias SocketRequestData = [SocketData]
 public typealias FeathersRequestObject = [String: SocketData]
@@ -44,9 +45,14 @@ public enum FeathersError: Error {
 }
 
 public enum FeathersResponse {
+    case success 
     case error(FeathersError)
-    case array(FeathersResponseArray)
-    case object(FeathersResponseObject)
+    case responseObject(FeathersResponseObject)
+    case dataObject(FeathersResponseObject)
+    case dataArray(array: FeathersResponseArray,
+                       total: Int,
+                        skip: Int,
+                        limit: Int)
     case raw(SocketResponseData)
     
     public func extractError() -> FeathersError? {
@@ -57,9 +63,39 @@ public enum FeathersResponse {
         }
     }
     
-    public func extractObject() -> FeathersResponseObject? {
-        if case let FeathersResponse.object(result) = self {
+    public func extractResponseObject() -> FeathersResponseObject? {
+        if case let FeathersResponse.responseObject(result) = self {
             return result
+        } else {
+            return nil
+        }
+    }
+    
+    public func extractDataObject() -> FeathersResponseObject? {
+        if case let FeathersResponse.dataObject(result) = self {
+            return result
+        } else {
+            return nil
+        }
+    }
+    
+    public func extractDataArray() -> FeathersResponseArray? {
+        if case let FeathersResponse.dataArray(array: result, _, _, _) = self {
+            return result
+        } else {
+            return nil
+        }
+    }
+    
+    public func extractDataArrayMetricks() -> (total: Int?, skip: Int?, limit: Int?)? {
+        if case let FeathersResponse.dataArray(_, total, skip, limit) = self {
+            let optionalTotal: Int? = total == Foundation.NSNotFound ? nil
+                                                                     : total
+            let optionalSkip: Int? = skip == Foundation.NSNotFound ? nil
+                                                                   : skip
+            let optionalLimit: Int? = limit == Foundation.NSNotFound ? nil
+                                                                     : limit
+            return (optionalTotal, optionalSkip, optionalLimit)
         } else {
             return nil
         }
