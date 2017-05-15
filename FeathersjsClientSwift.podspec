@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FeathersjsClientSwift'
-  s.version          = '0.8.8'
+  s.version          = '1.0.0'
   s.summary          = 'Feathersjs Client for iOS wrote in swift 3.0'
 
 # This description is used to generate tags and improve search results.
@@ -23,13 +23,12 @@ Feathersjs Client for iOS wrote in swift 3.0. Working on socketIO iOS under the 
                        DESC
 
   s.homepage         = 'https://github.com/truebucha/FeathersjsClientSwift'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Kanstantsin Bucha' => 'truebucha@gmail.com' }
   s.source           = { :git => 'https://github.com/truebucha/FeathersjsClientSwift.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/truebucha'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '8.0'
 
   s.source_files = 'FeathersjsClientSwift/Classes/**/*.{swift}'
   
@@ -37,7 +36,7 @@ Feathersjs Client for iOS wrote in swift 3.0. Working on socketIO iOS under the 
   #   'FeathersjsClientSwift' => ['FeathersjsClientSwift/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit'
-  s.dependency 'Socket.IO-Client-Swift', '~> 8.0'
+
+  s.frameworks = 'Foundation'
+  s.dependency 'Socket.IO-Client-Swift', '8.3.3'
 end

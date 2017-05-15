@@ -130,11 +130,11 @@ open class Emitter {
         let callback: OnAckCallback? = feathers.socket.emitWithAck(event, with: data)
         
         guard callback != nil else {
-            print("Should Have Valid Connection Callback To Emit ")
+            print("Should Have Valid Connection Callback Object To Emit ")
             throw FeathersError.emitterError(reason: "No valid callback")
         }
         
-        callback?(feathers.timeout, { (data) in
+        callback?.timingOut(after: feathers.timeout, callback: { (data) in
             let response = self.responseParser.parse(responseData: data)
             print("=== received response \(response)")
             completion(response)
@@ -146,11 +146,11 @@ open class Emitter {
                                objects: FeathersRequestArray?) -> SocketRequestData {
         var result: SocketRequestData = []
         
-        if let id = id as? SocketData {
+        if let id = id {
             result.append(id)
         }
         
-        if let object = object as? SocketData {
+        if let object = object {
             result.append(object)
         }
         

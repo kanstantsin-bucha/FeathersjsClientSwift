@@ -14,6 +14,10 @@ class ViewController: UIViewController {
 
     var feathers: FeathersClient?
     var authFailedReceiver: Receiver?
+    let email = "e1@mail.com"
+    let password = "pass5"
+    let serverURL = "https://feathersjs-client-swift.herokuapp.com/"
+    let localURL = "http://localhost:3030"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +32,13 @@ class ViewController: UIViewController {
     
     func connect() {
         // TODO: Please change to your server Socket IO URL
-        self.feathers = FeathersClient(URL: URL(string: "http://localhost:3030")!,
+        //https://feathersjs-client-swift.herokuapp.com/
+        self.feathers = FeathersClient(URL: URL(string: serverURL)!,
                                        namespace: nil,
-                                       token: "sdfsdfsdf",
+                                       token: "acfc38e82d1b8206e47a80b2197995fe8e14a7383b44f0941377c215e533cef919",
                                        timeout: 60)
         
-        let auth = UserAuth(email: "e@mail.com", password: "pass5")
+        let auth = UserAuth(email: email, password: password)
         
         guard auth != nil else {
             print("Email should be valid and password length should be more than 5 symbols")
@@ -41,12 +46,12 @@ class ViewController: UIViewController {
         }
         
         feathers?.onConnect = { [unowned self] response, ack in
-            self.createUser()
+            //self.createUser()
             
             do { try self.feathers?.authorize(auth!) { (response) in
                 let error = response.extractError()
                 guard error == nil else {
-                    print("Authentification error: \r\n \(error)")
+                    print("Authentification error: \r\n \(String(describing: error))")
                     return
                 }
                 
@@ -59,7 +64,7 @@ class ViewController: UIViewController {
                     print("Authentification error: \r\n \(reason)")
                     return
                 }
-                print("Signed in as user with id \(userID)")
+                print("Signed in as user with id \(String(describing: userID))")
                 // Do you stuff here
                 }
             } catch {
@@ -86,7 +91,7 @@ class ViewController: UIViewController {
         do { try
             self.authFailedReceiver?.startListening() { (response, ack) in
             let object = response.extractResponseObject()
-                print("Received unauthentification event \(object)")
+                print("Received unauthentification event \(String(describing: object))")
             }
         } catch {
             print("===== authFailedReceiver has error: \(error)")
@@ -98,8 +103,8 @@ class ViewController: UIViewController {
     }
     
     func createUser() {
-        let object: FeathersRequestObject = ["email": "e@mail.com",
-                                             "password" : "pass5"]
+        let object: FeathersRequestObject = ["email": email,
+                                             "password" : password]
         let emitter = Emitter(feathers: self.feathers!,
                               event: "users::create",
                               authRequired: false)
@@ -107,11 +112,11 @@ class ViewController: UIViewController {
         do { try emitter.emitWithAck(object) { (response) in
             let error = response.extractError()
             guard error == nil else {
-                print("Creation error error: \r\n \(error)")
+                print("Creation error error: \r\n \(String(describing: error))")
                 return
             }
             let object = response.extractResponseObject()
-            print("Received \(object)")
+            print("Received \(String(describing: object))")
             // you stuff
             }
         } catch {

@@ -124,12 +124,12 @@ open class FeathersClient {
     
     public let feathersURL: URL
     public let namespace: String?
-    public var timeout: UInt64
+    public var timeout: Int
     
     public init(URL: URL,
                 namespace: String?,
                 token: String,
-                timeout: UInt64,
+                timeout: Int,
                 debugMode: Bool = false) {
         self.feathersURL = URL
         self.namespace = namespace

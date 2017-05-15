@@ -19,10 +19,10 @@
     "ios": "9.0"
   },
   "source_files": "FeathersjsClientSwift/Classes/**/*.{swift}",
-  "frameworks": "UIKit",
+  "frameworks": "Foundation",
   "dependencies": {
     "Socket.IO-Client-Swift": [
-      "~> 8.0"
+      "8.3.3"
     ]
   }
 }

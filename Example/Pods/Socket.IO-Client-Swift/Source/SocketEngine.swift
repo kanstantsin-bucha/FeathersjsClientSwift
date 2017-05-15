@@ -101,11 +101,11 @@ public final class SocketEngine : NSObject, URLSessionDelegate, SocketEnginePoll
                 forceWebsockets = force
             case let .path(path):
                 socketPath = path
-            case let .voipEnabled(enable):
+                
                 if !socketPath.hasSuffix("/") {
                     socketPath += "/"
                 }
-
+            case let .voipEnabled(enable):
                 voipEnabled = enable
             case let .secure(secure):
                 self.secure = secure
@@ -215,7 +215,7 @@ public final class SocketEngine : NSObject, URLSessionDelegate, SocketEnginePoll
         var urlPolling = URLComponents(string: url.absoluteString)!
         var urlWebSocket = URLComponents(string: url.absoluteString)!
         var queryString = ""
-
+        
         urlWebSocket.path = socketPath
         urlPolling.path = socketPath
 
@@ -243,7 +243,7 @@ public final class SocketEngine : NSObject, URLSessionDelegate, SocketEnginePoll
     }
 
     private func createWebsocketAndConnect() {
-        ws = WebSocket(url: urlWebSocketWithSid as NSURL)
+        ws = WebSocket(url: urlWebSocketWithSid as URL)
 
         if cookies != nil {
             let headers = HTTPCookie.requestHeaderFields(with: cookies!)
@@ -261,7 +261,7 @@ public final class SocketEngine : NSObject, URLSessionDelegate, SocketEnginePoll
         ws?.callbackQueue = handleQueue
         ws?.voipEnabled = voipEnabled
         ws?.delegate = self
-        ws?.selfSignedSSL = selfSigned
+        ws?.disableSSLCertValidation = selfSigned
         ws?.security = security
 
         ws?.connect()
@@ -337,7 +337,7 @@ public final class SocketEngine : NSObject, URLSessionDelegate, SocketEnginePoll
         guard let ws = self.ws else { return }
 
         for msg in postWait {
-            ws.writeString(msg)
+            ws.write(string: msg)
         }
 
         postWait.removeAll(keepingCapacity: false)
@@ -372,6 +372,7 @@ public final class SocketEngine : NSObject, URLSessionDelegate, SocketEnginePoll
         
         self.sid = sid
         connected = true
+        pongsMissed = 0
         
         if let upgrades = json["upgrades"] as? [String] {
             upgradeWs = upgrades.contains("websocket")
@@ -515,7 +516,7 @@ public final class SocketEngine : NSObject, URLSessionDelegate, SocketEnginePoll
     }
 
     // Delegate methods
-    public func websocketDidConnect(_ socket: WebSocket) {
+    public func websocketDidConnect(socket: WebSocket) {
         if !forceWebsockets {
             probing = true
             probeWebSocket()
@@ -526,7 +527,7 @@ public final class SocketEngine : NSObject, URLSessionDelegate, SocketEnginePoll
         }
     }
 
-    public func websocketDidDisconnect(_ socket: WebSocket, error: NSError?) {
+    public func websocketDidDisconnect(socket: WebSocket, error: NSError?) {
         probing = false
 
         if closed {
