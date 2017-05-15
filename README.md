@@ -53,12 +53,12 @@ add to your app info plist
 ## HOWTO connect
 
 ```
-        self.feathers = FeathersClient(URL: URL(string: "http://localhost:3030")!,
+        self.feathers = FeathersClient(URL: URL(string: "https://feathersjs-client-swift.herokuapp.com/")!,
                                        namespace: nil,
                                        token: "sdfsdfsdf",
                                        timeout: 60)
         
-        let auth = UserAuth(email: "e@mail.com", password: "pass5")
+        let auth = UserAuth(email: "e1@mail.com", password: "pass5")
         
         guard auth != nil else {
             print("Email should be valid and password length should be more than 5 symbols")
