@@ -1,6 +1,6 @@
 # FeathersjsClientSwift
 
-[![CI Status](http://img.shields.io/travis/Kanstantsin Bucha/FeathersjsClientSwift.svg?style=flat)](https://travis-ci.org/Kanstantsin Bucha/FeathersjsClientSwift)
+[![CI Status](http://img.shields.io/travis/truebucha/FeathersjsClientSwift.svg?style=flat)](https://travis-ci.org/truebucha/FeathersjsClientSwift)
 [![Version](https://img.shields.io/cocoapods/v/FeathersjsClientSwift.svg?style=flat)](http://cocoapods.org/pods/FeathersjsClientSwift)
 [![License](https://img.shields.io/cocoapods/l/FeathersjsClientSwift.svg?style=flat)](http://cocoapods.org/pods/FeathersjsClientSwift)
 [![Platform](https://img.shields.io/cocoapods/p/FeathersjsClientSwift.svg?style=flat)](http://cocoapods.org/pods/FeathersjsClientSwift)
@@ -15,6 +15,7 @@ Processing auto reconnects, but you should handle Authentification yourself.
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+You could use local featherjs server by cloninig this repo https://github.com/truebucha/FeathersjsTestApp
 
 ## HOWTO use http transport
 
